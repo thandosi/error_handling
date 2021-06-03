@@ -36,8 +36,8 @@ def login():
             messagebox.showinfo("feedback", "Access Granted")
             root.destroy()
             import main2
-        else:
-            messagebox.showerror("feedback", "Access Denied")
+    else:
+        messagebox.showerror("feedback", "Access Denied")
 
 
 def close():
