@@ -39,11 +39,26 @@ def login():
         else:
             messagebox.showerror("feedback", "Access Denied")
 
+
+def close():
+    root.destroy()
+
+
+def clear():
+    my_entry1.delete(0, END)
+    my_entry2.delete(0, END)
+
 # Creating buttons
 
 
 button_login = Button(root, text="Login", borderwidth="10", bg="Purple", font=12, command=login)
-button_login.place(x=183, y=200)
+button_login.place(x=80, y=200)
+
+exit_btn = Button(root, text="Close", borderwidth="10", bg="Purple", font=12, command=close)
+exit_btn.place(x=190, y=200)
+
+clear_btn = Button(root, text="Clear", borderwidth="10", bg="Purple", font=12, command=clear)
+clear_btn.place(x=300, y=200)
 
 root.mainloop()
 
