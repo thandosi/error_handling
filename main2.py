@@ -22,11 +22,11 @@ def check():
     try:
         funds = int(funds)
         if funds < 3000:
-            messagebox.showerror("feedback", "Please deposit more funds for this excursion.")
+            messagebox.showerror("Feedback", "Please deposit more funds for this excursion.")
         else:
-            messagebox.showinfo("feedback", "Congratulations. You qualify for the trip to Malaysia")
+            messagebox.showinfo("Feedback", "Congratulations. You qualify for the trip to Malaysia")
     except ValueError:
-        messagebox.showerror("feedback", "Error,Please insert a number.")
+        messagebox.showerror("Feedback", "Error,Please insert a number.")
 
 # Creating a btn
 
@@ -34,5 +34,20 @@ def check():
 button_verify = Button(root, text="Check qualification", borderwidth="5", bg="Purple", font=12, command=check)
 button_verify.place(x=50, y=70)
 
+
+def close():
+    root.destroy()
+
+
+exit_btn = Button(root, text="Close", bg="purple", fg="black", borderwidth="3", command=close)
+exit_btn.place(x=90, y=150)
+
+
+def clear():
+    my_entry1.delete(0, END)
+
+
+clear_btn = Button(root, text="clear", bg="purple", fg="black", borderwidth="3", command=clear)
+clear_btn.place(x=200, y=150)
 
 root.mainloop()
